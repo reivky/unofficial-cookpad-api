@@ -1,24 +1,22 @@
-# Lumen PHP Framework
-
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel/lumen-framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://img.shields.io/packagist/v/laravel/lumen-framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://img.shields.io/packagist/l/laravel/lumen)](https://packagist.org/packages/laravel/lumen-framework)
-
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
-
-## Official Documentation
-
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
-
-## Contributing
-
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Unofficial Cookpad API
+### Status
+Under Development
+### Introductions
+A food recipe rest api sourced from <a href="https://cookpad.com" target="_BLANK">Cookpad</a> includes ingredients, instructions, description, image and author profile built with <a href="https://lumen.laravel.com/" target="_BLANK">Laravel Lumens</a>
+### Base URL
+https://cookpad.reivart.com/api
+### Endpoints
+| Endpoint                  | Example                                                                                             | Description                                             |
+| ------------------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| `/recipes`                | [`/recipes`](https://cookpad.reivart.com/api/recipes)                                               | get all the latest recipes                             |
+| `/recipe/{key}`           | [`/recipe/brokoli-tumis`](https://cookpad.reivart.com/api/recipe/brokoli-tumis)                     | get detail of one recipe                               |
+| `/recipes/categories`     | [`/recipes/categories`](https://cookpad.reivart.com/api/recipes/categories)                         | get all recipe categories                               |
+| `/recipes/category/{key}` | [`/recipes/category/resep-daging`](https://cookpad.reivart.com/api/recipes/category/resep-daging)   | get all the latest recipes from specific category   |
+### Parameters
+| Parameter                      | Example                                                                                                             | Description                                                                                 |
+| -------------------------------| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `search`                       | [`/recipes?search=ayam`](https://cookpad.reivart.com/api/recipes?search=ayam)                                       | search for recipes by title                                                              |
+| `paginate` & `page`            | [`/recipes?paginate=10&page=2`](https://cookpad.reivart.com/api/recipes?paginate=10&page=2)                         | `paginate` is used to limit the amount of recipe data, while `page` is used to move pages   |
+| `paginate` & `page` & `search` | [`/recipes?search=tumis&paginate=2&page=3`](https://cookpad.reivart.com/api/recipes?search=tumis&paginate=2&page=3) | `paginate` and `page` can also be applied together with `search`                             |
+### License
+Licensed under [MIT](https://opensource.org/licenses/MIT).
